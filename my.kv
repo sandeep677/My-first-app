@@ -1,0 +1,54 @@
+Manager:
+    LoginPage:   
+    MainPage:
+
+<LoginPage>:
+    name:"Login"
+    FloatLayout:
+        Label:
+            text:"TSES APP"
+            color:(0,0,0) 
+            bold:True
+            font_size:"50sp"
+            pos_hint:{"center_x":0.5,"center_y":0.8}
+            
+        Button:
+            text:"LOGIN IN"
+            size_hint:(None,None)
+            width:600
+            height:100
+            pos_hint:{"center_x":0.5,"center_y":0.4}
+            on_release:
+                root.manager.current = "Mainpage"
+                root.manager.transition.direction = "left"
+                
+        Label:
+            text:"Password : "
+            color:(0,0,0) 
+            bold:True
+            font_size:"15sp"
+            pos_hint:{"center_x":0.25,"center_y":0.54}
+            
+        Label:
+            text:"School Id : "
+            color:(0,0,0) 
+            bold:True
+            font_size:"15sp"
+            pos_hint:{"center_x":0.25,"center_y":0.64}
+            
+        TextInput:
+            hint_text:"Enter your school id"
+            size_hint:(None,None)
+            width:500
+            height:70
+            pos_hint:{"center_x":0.5,"center_y":0.6}
+            
+        TextInput:
+            hint_text:"Enter your password"
+            size_hint:(None,None)
+            width:500
+            height:70
+            pos_hint:{"center_x":0.5,"center_y":0.5} 
+            
+<MainPage>:
+    name:"Mainpage"          
